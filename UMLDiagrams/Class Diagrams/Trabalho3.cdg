@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Trabalho3">
+  <ClassDiagramComponents>
+    <Class name="Cavalo" package="" visibility="public" xPosition="1032.0" yPosition="172.0">
+      <Fields>
+        <Field name="valor" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="movimentar" returnType="void" visibility="public"/>
+        <Method name="checarEspecial" returnType="boolean" visibility="public"/>
+        <Method name="getValor" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Bispo" package="" visibility="public" xPosition="737.0" yPosition="341.0">
+      <Fields>
+        <Field name="valor" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="movimentar" returnType="void" visibility="public"/>
+        <Method name="checarEspecial" returnType="boolean" visibility="public"/>
+        <Method name="getValor" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Peao" package="" visibility="public" xPosition="937.0" yPosition="341.0">
+      <Fields>
+        <Field name="valor" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="movimentar" returnType="void" visibility="public"/>
+        <Method name="promocao" returnType="void" visibility="public"/>
+        <Method name="checarEspecial" returnType="boolean" visibility="public"/>
+        <Method name="getValor" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Rei" package="" visibility="public" xPosition="624.0" yPosition="172.0">
+      <Fields>
+        <Field name="valor" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="movimentar" returnType="void" visibility="public"/>
+        <Method name="checarEspecial" returnType="boolean" visibility="public"/>
+        <Method name="getValor" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Rainha" package="" visibility="public" xPosition="1032.0" yPosition="11.0">
+      <Fields>
+        <Field name="valor" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="movimentar" returnType="void" visibility="public"/>
+        <Method name="checarEspecial" returnType="boolean" visibility="public"/>
+        <Method name="getValor" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Torre" package="" visibility="public" xPosition="624.0" yPosition="11.0">
+      <Fields>
+        <Field name="valor" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="movimentar" returnType="void" visibility="public"/>
+        <Method name="checarEspecial" returnType="boolean" visibility="public"/>
+        <Method name="getValor" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Inicializador" package="" visibility="public" xPosition="17.0" yPosition="11.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Controller" package="" visibility="public" xPosition="17.0" yPosition="182.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="TelaInicial" package="" visibility="public" xPosition="17.0" yPosition="534.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="TelaJogo" package="" visibility="public" xPosition="554.0" yPosition="534.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="MovimentoInvalidoException" package="" visibility="public" xPosition="17.0" yPosition="665.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Jogador" package="" visibility="public" xPosition="396.0" yPosition="11.0">
+      <Fields>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="pontuacao" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Xadrez" package="" visibility="public" xPosition="368.0" yPosition="182.0">
+      <Fields>
+        <Field name="tabuleiro" type="int[][]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="TelaComoJogar" package="" visibility="public" xPosition="290.0" yPosition="534.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Interface name="Peca" package="" visibility="public" xPosition="839.0" yPosition="11.0">
+      <Methods>
+        <Method name="movimentar" returnType="void" visibility="public"/>
+        <Method name="checarEspecial" returnType="boolean" visibility="public"/>
+        <Method name="getValor" returnType="int" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="Jogo" package="" visibility="public" xPosition="429.0" yPosition="665.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="a" source="Xadrez" target="Jogador" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Torre" target="Peca"/>
+    <HasRelation name="c" source="TelaComoJogar" target="Controller" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="TelaJogo" target="Xadrez" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Cavalo" target="Peca"/>
+    <UseRelation name="" source="Xadrez" target="Peca" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Bispo" target="Peca"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Rei" target="Peca"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Rainha" target="Peca"/>
+    <HasRelation name="c" source="TelaInicial" target="Controller" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="Controller" target="Xadrez" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="c" source="TelaJogo" target="Controller" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Peao" target="Peca"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

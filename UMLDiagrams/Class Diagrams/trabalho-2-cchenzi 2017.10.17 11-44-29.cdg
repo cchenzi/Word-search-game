@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="trabalho-2-cchenzi">
+  <ClassDiagramComponents>
+    <Class name="Controller" package="ine5404.Control" visibility="public" xPosition="192.0" yPosition="141.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="mudarEstadoCoordenada" returnType="void" visibility="public">
+          <Argument type="Jogo" name="jogo"/>
+          <Argument type="Coordenada" name="cord"/>
+        </Method>
+        <Method name="checarJogoAcabou" returnType="boolean" visibility="public">
+          <Argument type="Jogo" name="jogo"/>
+          <Argument type="Coordenada" name="cord"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Inicializador" package="ine5404.Control" visibility="public" xPosition="226.0" yPosition="10.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EntradaDadosInvalidaException" package="ine5404.Exception" visibility="public" xPosition="1616.0" yPosition="664.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="msg"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Coordenada" package="ine5404.Model" visibility="public" xPosition="2108.0" yPosition="864.0">
+      <Fields>
+        <Field name="x" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getX" returnType="int" visibility="public"/>
+        <Method name="setX" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="getY" returnType="int" visibility="public"/>
+        <Method name="setY" returnType="void" visibility="public">
+          <Argument type="int" name="y"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="EmbaralhadorDiagonalPrincipal" package="ine5404.Model" visibility="public" xPosition="1554.0" yPosition="151.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="distribuirPalavras" returnType="boolean" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+          <Argument type="String" name="palavra"/>
+          <Argument type="char[][]" name="grid"/>
+          <Argument type="LinkedHashMap&lt;Coordenada, Boolean&gt;" name="mapaPalavras"/>
+        </Method>
+        <Method name="validarCoordenada" returnType="boolean" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+          <Argument type="String" name="palavra"/>
+          <Argument type="char[][]" name="grid"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EmbaralhadorDiagonalSecundaria" package="ine5404.Model" visibility="public" xPosition="1554.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="distribuirPalavras" returnType="boolean" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+          <Argument type="String" name="palavra"/>
+          <Argument type="char[][]" name="grid"/>
+          <Argument type="LinkedHashMap&lt;Coordenada, Boolean&gt;" name="mapaPalavras"/>
+        </Method>
+        <Method name="validarCoordenada" returnType="boolean" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+          <Argument type="String" name="palavra"/>
+          <Argument type="char[][]" name="grid"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EmbaralhadorHorizontal" package="ine5404.Model" visibility="public" xPosition="1554.0" yPosition="411.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="distribuirPalavras" returnType="boolean" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+          <Argument type="String" name="palavra"/>
+          <Argument type="char[][]" name="grid"/>
+          <Argument type="LinkedHashMap&lt;Coordenada, Boolean&gt;" name="mapaPalavras"/>
+        </Method>
+        <Method name="validarCoordenada" returnType="boolean" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+          <Argument type="String" name="palavra"/>
+          <Argument type="char[][]" name="grid"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EmbaralhadorVertical" package="ine5404.Model" visibility="public" xPosition="1554.0" yPosition="281.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="distribuirPalavras" returnType="boolean" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+          <Argument type="String" name="palavra"/>
+          <Argument type="char[][]" name="grid"/>
+          <Argument type="LinkedHashMap&lt;Coordenada, Boolean&gt;" name="mapaPalavras"/>
+        </Method>
+        <Method name="validarCoordenada" returnType="boolean" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+          <Argument type="String" name="palavra"/>
+          <Argument type="char[][]" name="grid"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Jogo" package="ine5404.Model" visibility="public" xPosition="119.0" yPosition="532.0">
+      <Fields>
+        <Field name="dificuldades" type="List&lt;Dificuldade&gt;" visibility="private"/>
+        <Field name="mapaPalavras" type="Map&lt;Coordenada, Boolean&gt;" visibility="private"/>
+        <Field name="mapaLetrasAleatorias" type="Map&lt;Coordenada, Boolean&gt;" visibility="private"/>
+        <Field name="linha" type="int" visibility="private"/>
+        <Field name="palavrasSorteadas" type="String[]" visibility="private"/>
+        <Field name="grid" type="char[][]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+          <Argument type="int" name="numeroPalavras"/>
+          <Argument type="List&lt;Dificuldade&gt;" name="dificuldades"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Embaralhador" returnType="Embaralhador" visibility="private">
+          <Argument type="Dificuldade" name="selecionarDificuldadeAleatoria"/>
+        </Method>
+        <Method name="getLinha" returnType="int" visibility="public"/>
+        <Method name="getMapaPalavras" returnType="Map&lt;Coordenada, Boolean&gt;" visibility="public"/>
+        <Method name="setMapaPalavras" returnType="void" visibility="public">
+          <Argument type="Map&lt;Coordenada, Boolean&gt;" name="mapaPalavras"/>
+        </Method>
+        <Method name="getMapaLetrasAleatorias" returnType="Map&lt;Coordenada, Boolean&gt;" visibility="public"/>
+        <Method name="setMapaLetrasAleatorias" returnType="void" visibility="public">
+          <Argument type="Map&lt;Coordenada, Boolean&gt;" name="mapaLetrasAleatorias"/>
+        </Method>
+        <Method name="setLinha" returnType="void" visibility="public">
+          <Argument type="int" name="linha"/>
+        </Method>
+        <Method name="getColuna" returnType="int" visibility="public"/>
+        <Method name="setColuna" returnType="void" visibility="public">
+          <Argument type="int" name="coluna"/>
+        </Method>
+        <Method name="getNumeroPalavras" returnType="int" visibility="public"/>
+        <Method name="setNumeroPalavras" returnType="void" visibility="public">
+          <Argument type="int" name="numeroPalavras"/>
+        </Method>
+        <Method name="colocarPalavrasNoGrid" returnType="void" visibility="public"/>
+        <Method name="selecionarDificuldadeAleatoria" returnType="Dificuldade" visibility="public"/>
+        <Method name="getPalavrasSorteadas" returnType="String[]" visibility="public"/>
+        <Method name="substituirPalavra" returnType="void" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+        <Method name="setPalavrasSorteadas" returnType="void" visibility="public">
+          <Argument type="String[]" name="palavrasSorteadas"/>
+        </Method>
+        <Method name="getGrid" returnType="char[][]" visibility="public"/>
+        <Method name="lerPalavra" returnType="String" visibility="public"/>
+        <Method name="guardarPalavra" returnType="void" visibility="public"/>
+        <Method name="carregarLetrasAleatoriasNoGrid" returnType="void" visibility="public"/>
+        <Method name="completarLetra" returnType="char" visibility="public"/>
+        <Method name="fazerPalavraAoContrario" returnType="String" visibility="public">
+          <Argument type="String" name="palavra"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TelaInicial" package="ine5404.View" visibility="public" xPosition="736.0" yPosition="10.0">
+      <Fields>
+        <Field name="controller" type="Controller" visibility="private"/>
+        <Field name="NovoJogo" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="Root" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="UITelaInicio" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="botaoComoJogar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoInicio" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoNovoJogo" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="spinnerColuna" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="spinnerDificuldade" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="spinnerLinha" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="spinnerNumeroPalavras" type="javax.swing.JSpinner" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Controller" name="controller"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="botaoInicioActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="botaoNovoJogoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="validaDadosEntrada" returnType="void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TelaJogo" package="ine5404.View" visibility="public" xPosition="972.0" yPosition="798.0">
+      <Fields>
+        <Field name="frame" type="JFrame" visibility="package"/>
+        <Field name="controller" type="Controller" visibility="private"/>
+        <Field name="painelBotoes" type="JPanel" visibility="package"/>
+        <Field name="painelLabels" type="JPanel" visibility="package"/>
+        <Field name="botoesGrid" type="JToggleButton[][]" visibility="package"/>
+        <Field name="labelPalavrasSorteadas" type="JLabel[]" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+          <Argument type="char[][]" name="grid"/>
+          <Argument type="Controller" name="controller"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="CriarBotoes" returnType="void" visibility="public">
+          <Argument type="Jogo" name="jogo"/>
+        </Method>
+        <Method name="CriarLabels" returnType="void" visibility="public">
+          <Argument type="Jogo" name="jogo"/>
+        </Method>
+        <Method name="CarregarPalavras" returnType="void" visibility="public">
+          <Argument type="Jogo" name="jogo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Embaralhador" package="ine5404.Model" visibility="public" xPosition="1554.0" yPosition="532.0">
+      <Methods>
+        <Method name="distribuirPalavras" returnType="boolean" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+          <Argument type="String" name="palavra"/>
+          <Argument type="char[][]" name="grid"/>
+          <Argument type="LinkedHashMap&lt;Coordenada, Boolean&gt;" name="mapaPalavras"/>
+        </Method>
+        <Method name="validarCoordenada" returnType="boolean" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+          <Argument type="String" name="palavra"/>
+          <Argument type="char[][]" name="grid"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="ine5404.Model.Jogo" target="ine5404.Model.Embaralhador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ine5404.Model.EmbaralhadorVertical" target="ine5404.Model.Embaralhador"/>
+    <HasRelation name="mapaPalavras" source="ine5404.Model.Jogo" target="ine5404.Model.Coordenada" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Map&lt;Coordenada, Boolean&gt;"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ine5404.Model.EmbaralhadorDiagonalPrincipal" target="ine5404.Model.Embaralhador"/>
+    <UseRelation source="ine5404.Model.EmbaralhadorVertical" target="ine5404.Model.Coordenada" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ine5404.Control.Controller" target="ine5404.Model.Jogo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mapaLetrasAleatorias" source="ine5404.Model.Jogo" target="ine5404.Model.Coordenada" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Map&lt;Coordenada, Boolean&gt;"/>
+    <UseRelation source="ine5404.Model.EmbaralhadorDiagonalSecundaria" target="ine5404.Model.Coordenada" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ine5404.Model.EmbaralhadorHorizontal" target="ine5404.Model.Coordenada" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ine5404.Model.Jogo" target="ine5404.Model.Coordenada" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ine5404.Model.EmbaralhadorDiagonalPrincipal" target="ine5404.Model.Coordenada" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ine5404.View.TelaJogo" target="ine5404.Model.Jogo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="controller" source="ine5404.View.TelaJogo" target="ine5404.Control.Controller" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="controller" source="ine5404.View.TelaInicial" target="ine5404.Control.Controller" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ine5404.Model.EmbaralhadorHorizontal" target="ine5404.Model.Embaralhador"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ine5404.Model.EmbaralhadorDiagonalSecundaria" target="ine5404.Model.Embaralhador"/>
+    <UseRelation source="ine5404.Model.Embaralhador" target="ine5404.Model.Coordenada" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
